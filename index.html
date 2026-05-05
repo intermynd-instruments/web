@@ -42,8 +42,12 @@
     .mobile-menu-open .hamburger-bot { transform: translateY(-8px) rotate(-45deg); }
     .products-grid > * { border-bottom: 1px solid #262626; border-right: 1px solid #262626; }
     .products-grid > *:last-child { border-bottom: none; }
+    .how-grid > * { border-bottom: 1px solid #262626; }
+    .how-grid > *:last-child { border-bottom: none; }
     @media (min-width: 640px) {
       .products-grid > *:nth-child(even) { border-right: none; }
+      .how-grid > * { border-bottom: none; border-right: 1px solid #262626; }
+      .how-grid > *:last-child { border-right: none; }
     }
     @media (min-width: 1024px) {
       .products-grid > * { border-right: 1px solid #262626; }
@@ -88,21 +92,21 @@
     <div class="absolute inset-0 dot-grid"></div>
     <div class="w-full px-6 lg:px-16 pt-6 pb-24 relative z-10">
       <div class="max-w-4xl">
-        <h1 class="font-pixel text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] leading-[1.15] sm:leading-[1.1] tracking-[0.02em] mb-8 sm:mb-12 text-black">
+        <h1 class="font-pixel text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] leading-[1.15] sm:leading-[1.1] tracking-[0.02em] mb-8 sm:mb-12 text-white">
           INTERMYND<br>INSTRUMENTS
         </h1>
-        <p class="text-lg sm:text-xl lg:text-2xl text-black/70 max-w-2xl mb-4 font-light leading-relaxed">
+        <p class="text-lg sm:text-xl lg:text-2xl text-white/80 max-w-2xl mb-4 font-light leading-relaxed">
           Workflow-first instruments for the connected mind.
         </p>
-        <p class="text-sm sm:text-base text-black/50 max-w-xl mb-12 leading-relaxed">
+        <p class="text-sm sm:text-base text-white/60 max-w-xl mb-12 leading-relaxed">
           We design devices for musicians who want a tighter loop between hardware, software, and performance. Every unit is made in small batches and built to order.
         </p>
         <div class="flex flex-wrap gap-4">
-          <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-neutral-800 transition-colors text-sm">
+          <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-neutral-200 transition-colors text-sm">
             See the line
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
-          <a href="#approach" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-black/30 text-black/80 hover:border-black/60 hover:text-black transition-all text-sm font-semibold">
+          <a href="#approach" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/40 text-white/80 hover:border-white hover:text-white transition-all text-sm font-semibold">
             How we build
           </a>
         </div>
@@ -110,61 +114,38 @@
     </div>
   </section>
 
-  <!-- Stats -->
+  <!-- For Musicians & Builders -->
   <section class="border-t border-neutral-200 bg-neutral-50">
-    <div class="w-full px-6 lg:px-16 py-20">
-      <div class="flex flex-wrap gap-x-20 gap-y-10 mb-20">
-        <div>
-          <p class="text-5xl sm:text-6xl font-bold tracking-tight text-neutral-900">3</p>
-          <p class="text-xs font-semibold text-[#6f26de] mt-3 uppercase tracking-[0.2em]">Instruments</p>
-          <p class="text-sm text-neutral-400 mt-1">in current line</p>
-        </div>
-        <div>
-          <p class="text-5xl sm:text-6xl font-bold tracking-tight text-neutral-900">&mdash;</p>
-          <p class="text-xs font-semibold text-[#6f26de] mt-3 uppercase tracking-[0.2em]">Made to order</p>
-          <p class="text-sm text-neutral-400 mt-1">small batches only</p>
-        </div>
-        <div>
-          <p class="text-5xl sm:text-6xl font-bold tracking-tight text-neutral-900">&lt;/&gt;</p>
-          <p class="text-xs font-semibold text-[#6f26de] mt-3 uppercase tracking-[0.2em]">Web-native</p>
-          <p class="text-sm text-neutral-400 mt-1">control surfaces</p>
-        </div>
-      </div>
-      <div class="grid sm:grid-cols-3 gap-10">
-        <div class="border-t border-neutral-200 pt-8">
-          <span class="text-xs font-bold text-[#6f26de] tracking-[0.3em]">01</span>
-          <h3 class="text-lg font-semibold mt-4 mb-3 text-neutral-900">Browser-based control surfaces</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Full configuration and deeper control through a modern web interface that feels native, not bolted-on.</p>
-        </div>
-        <div class="border-t border-neutral-200 pt-8">
-          <span class="text-xs font-bold text-[#6f26de] tracking-[0.3em]">02</span>
-          <h3 class="text-lg font-semibold mt-4 mb-3 text-neutral-900">Portable forms for real movement</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Shaped for desks, cases, and live setups. Sized to move between studio, rehearsal room, and stage.</p>
-        </div>
-        <div class="border-t border-neutral-200 pt-8">
-          <span class="text-xs font-bold text-[#6f26de] tracking-[0.3em]">03</span>
-          <h3 class="text-lg font-semibold mt-4 mb-3 text-neutral-900">Focused runs, not mass production</h3>
-          <p class="text-sm text-neutral-500 leading-relaxed">Each unit is built with intention. No anonymous warehouse stock. No chasing scale for its own sake.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Launch Film -->
-  <section class="border-t border-neutral-200 bg-white">
-    <div class="w-full px-6 lg:px-16 py-24">
-      <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-8">
-        <span class="text-neutral-300">/</span> Launch Film <span class="text-[#6f26de]">■</span>
+    <div class="w-full px-6 lg:px-16 pt-24 pb-14">
+      <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-4">
+        <span class="text-neutral-300">/</span> Open by design <span class="text-[#6f26de]">■</span>
       </p>
-      <div class="relative aspect-video bg-neutral-100 border border-neutral-200 rounded-xl flex items-center justify-center group cursor-pointer overflow-hidden">
-        <div class="absolute inset-0 dot-grid-light"></div>
-        <div class="relative z-10 flex flex-col items-center gap-4">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="text-[#6f26de] group-hover:scale-110 transition-transform">
-            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
-            <path d="M10 8v8l6-4-6-4z" fill="currentColor"/>
-          </svg>
-          <span class="text-sm font-medium text-neutral-400 group-hover:text-[#6f26de] transition-colors">Watch on YouTube</span>
-        </div>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 text-neutral-900">For musicians &amp; builders.</h2>
+      <p class="text-neutral-500 max-w-2xl leading-relaxed text-sm sm:text-base">
+        Two ways to get an Intermynd instrument — buy it ready to play, or build it yourself from open schematics.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-0 bg-[#0a0a0a] how-grid w-full">
+      <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[280px]">
+        <span class="text-5xl font-black text-neutral-800 tracking-tight select-none">01</span>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-4 mb-3">For musicians</h3>
+        <p class="text-sm text-neutral-400 mb-6 leading-relaxed max-w-md">Order a pre-assembled unit, fully tested and ready to use. Every instrument ships with its enclosure, a power supply, and access to the browser-based control surface.</p>
+        <ul class="flex flex-col gap-2 text-sm text-neutral-500">
+          <li class="flex items-start gap-2"><span class="text-[#6f26de] mt-0.5">■</span> Fully assembled and tested</li>
+          <li class="flex items-start gap-2"><span class="text-[#6f26de] mt-0.5">■</span> Enclosure + power supply included</li>
+          <li class="flex items-start gap-2"><span class="text-[#6f26de] mt-0.5">■</span> Web UI ready at first boot</li>
+        </ul>
+      </div>
+      <div class="p-8 lg:p-12 flex flex-col justify-center min-h-[280px]">
+        <span class="text-5xl font-black text-neutral-800 tracking-tight select-none">02</span>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white mt-4 mb-3">For builders</h3>
+        <p class="text-sm text-neutral-400 mb-6 leading-relaxed max-w-md">All schematics and PCB files are open source. Source your own components, mill or 3D-print a case, and assemble it yourself. Firmware is closed source.</p>
+        <ul class="flex flex-col gap-2 text-sm text-neutral-500">
+          <li class="flex items-start gap-2"><span class="text-[#6f26de] mt-0.5">■</span> Open schematics &amp; PCB files</li>
+          <li class="flex items-start gap-2"><span class="text-[#6f26de] mt-0.5">■</span> BOM and assembly guide</li>
+          <li class="flex items-start gap-2"><span class="text-[#6f26de] mt-0.5">■</span> Pre-programmed MCU available</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -177,7 +158,7 @@
       </p>
       <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 text-neutral-900">Three devices, one philosophy.</h2>
       <p class="text-neutral-500 max-w-2xl leading-relaxed text-sm sm:text-base">
-        A placeholder walkthrough for the lineup. Swap in product photography, detailed specs, and launch timing as the range evolves.
+        All schematics are fully open source. Make your own PCB and case at home, or order one pre-assembled from us. Firmware remains closed source.
       </p>
     </div>
 
@@ -189,12 +170,18 @@
           </div>
           <div class="border-t border-neutral-800"></div>
           <div class="p-6 sm:p-8 lg:p-10">
-            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">Polyphonic Synth</span>
+            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">MIDI Scene Launcher</span>
             <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-2">Kaiser-1</h3>
-            <p class="text-sm text-neutral-400 mb-6 leading-relaxed">Direct control, fast setup, and a workflow that moves cleanly between hardware and web-based editing.</p>
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-xl sm:text-2xl font-bold text-white">$159 <span class="text-xs font-normal text-neutral-500">USD</span></span>
-              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors">Preorder</a>
+            <p class="text-sm text-neutral-400 mb-4 leading-relaxed">A dedicated MIDI scene launcher for hardware. Switch between setups, recall scenes, and route control messages across your gear with zero menu diving.</p>
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-semibold tracking-[0.1em] uppercase text-[#6f26de] bg-[#6f26de]/10 border border-[#6f26de]/20 px-2.5 py-1">Open schematics</span>
+            </div>
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <span class="text-xl sm:text-2xl font-bold text-white">$159 <span class="text-xs font-normal text-neutral-500">USD</span></span>
+                <p class="text-xs text-neutral-500 mt-1">Schematics free &mdash; build your own</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors rounded-full">Preorder</a>
             </div>
           </div>
         </div>
@@ -207,10 +194,16 @@
           <div class="p-6 sm:p-8 lg:p-10">
             <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">Performance Controller</span>
             <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-2">Polydeck</h3>
-            <p class="text-sm text-neutral-400 mb-6 leading-relaxed">A broader performance surface without giving up portability, clarity, or a modern control experience.</p>
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-xl sm:text-2xl font-bold text-white">$129 <span class="text-xs font-normal text-neutral-500">USD</span></span>
-              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors">Preorder</a>
+            <p class="text-sm text-neutral-400 mb-4 leading-relaxed">A broader performance surface without giving up portability, clarity, or a modern control experience.</p>
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-semibold tracking-[0.1em] uppercase text-[#6f26de] bg-[#6f26de]/10 border border-[#6f26de]/20 px-2.5 py-1">Open schematics</span>
+            </div>
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <span class="text-xl sm:text-2xl font-bold text-white">$129 <span class="text-xs font-normal text-neutral-500">USD</span></span>
+                <p class="text-xs text-neutral-500 mt-1">Schematics free &mdash; build your own</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors rounded-full">Preorder</a>
             </div>
           </div>
         </div>
@@ -223,10 +216,16 @@
           <div class="p-6 sm:p-8 lg:p-10">
             <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">Drum Machine</span>
             <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-2">Drumstream DS-8</h3>
-            <p class="text-sm text-neutral-400 mb-6 leading-relaxed">The same portable footprint and connected UI approach, built for rhythm-driven setups.</p>
-            <div class="flex items-center justify-between gap-4">
-              <span class="text-xl sm:text-2xl font-bold text-white">$450 <span class="text-xs font-normal text-neutral-500">USD</span></span>
-              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors">Preorder</a>
+            <p class="text-sm text-neutral-400 mb-4 leading-relaxed">The same portable footprint and connected UI approach, built for rhythm-driven setups.</p>
+            <div class="flex flex-wrap gap-1.5 mb-5">
+              <span class="text-[10px] font-semibold tracking-[0.1em] uppercase text-[#6f26de] bg-[#6f26de]/10 border border-[#6f26de]/20 px-2.5 py-1">Open schematics</span>
+            </div>
+            <div class="flex items-end justify-between gap-4">
+              <div>
+                <span class="text-xl sm:text-2xl font-bold text-white">$450 <span class="text-xs font-normal text-neutral-500">USD</span></span>
+                <p class="text-xs text-neutral-500 mt-1">Schematics free &mdash; build your own</p>
+              </div>
+              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors rounded-full">Preorder</a>
             </div>
           </div>
         </div>
@@ -291,9 +290,12 @@
         <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-6">
           <span class="text-neutral-300">/</span> Production <span class="text-[#6f26de]">■</span>
         </p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-neutral-900">Small batches. Built to order.</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-neutral-900">Open schematics. Build or buy.</h2>
+        <p class="text-neutral-500 max-w-xl mx-auto mb-4 leading-relaxed text-sm sm:text-base">
+          Every product&rsquo;s schematics are fully open source. Print your own PCB and case at home, or order one pre-assembled from us in a finished package. Firmware remains closed source.
+        </p>
         <p class="text-neutral-500 max-w-xl mx-auto mb-10 leading-relaxed text-sm sm:text-base">
-          Not chasing scale for its own sake. Each run stays focused, deliberate, and close to the product &mdash; so the result feels considered from enclosure to interface.
+          Not chasing scale for its own sake. Each run stays focused, deliberate, and close to the product.
         </p>
         <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-[#6f26de] text-white font-semibold rounded-full hover:bg-[#5a1eb2] transition-colors text-sm">
           View the line
