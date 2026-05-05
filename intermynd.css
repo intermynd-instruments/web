@@ -3,7 +3,7 @@
    v1.0
    ========================================================================== */
 
-/* --- Font Face — Nexmode (display / pixel) -------------------------------- */
+/* --- Font Face — Graxebeosa (display / pixel) ----------------------------- */
 @font-face {
   font-family: 'Pixel';
   src: url('Nexmod-Regular.otf') format('opentype');
@@ -36,7 +36,7 @@
   --color-text-muted:    #a3a3a3;  /* neutral-400 */
 
   /* Typography */
-  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans:    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-display: 'Pixel', monospace;
 }
 

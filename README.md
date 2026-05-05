@@ -39,7 +39,7 @@ Or start from `base.html` which already includes everything above plus a navbar,
 |------|---------|
 | `intermynd.css` | Design tokens, patterns, and reusable classes |
 | `base.html` | Starter template — navbar, footer, hamburger menu already wired |
-| `Nexmod-Regular.otf` | Display font (loaded by `intermynd.css`) |
+| `NCLGraxebeosa-Demo.otf` | Display font (loaded by `intermynd.css`) |
 | `logo.svg` | Intermynd Instruments logo |
 
 ---
@@ -97,7 +97,7 @@ Available via Tailwind as the default sans-serif. Weights 300–900 are loaded f
 <p class="text-sm text-neutral-500">Body copy in Inter</p>
 ```
 
-### `font-pixel` — Nexmode (display / hero)
+### `font-pixel` — Graxebeosa (display / hero)
 
 Available as the Tailwind utility `font-pixel`. Use it for hero headings or any place you want a pixel/bitmap feel.
 
@@ -105,7 +105,7 @@ Available as the Tailwind utility `font-pixel`. Use it for hero headings or any 
 <h1 class="font-pixel text-7xl">HEADLINE</h1>
 ```
 
-Nexmode is loaded from `Nexmod-Regular.otf` via `@font-face` in `intermynd.css`. Copy the `.otf` file into every project that uses the pixel font.
+Graxebeosa is loaded from `NCLGraxebeosa-Demo.otf` via `@font-face` in `intermynd.css`. Copy the `.otf` file into every project that uses the pixel font.
 
 ---
 
@@ -230,7 +230,7 @@ For larger projects, swap the CDN for a Tailwind CLI or PostCSS build. The token
 
 ## Adding to an existing project
 
-1. **Copy** `intermynd.css` and `Nexmod-Regular.otf` into your project root
+1. **Copy** `intermynd.css` and `NCLGraxebeosa-Demo.otf` into your project root
 2. **Add** the three `<head>` lines from Quick Start
 3. **Pick** the classes you need. The tokens and grid styles work independently of Tailwind if needed.
 
