@@ -373,7 +373,7 @@
     const termObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => entry.target.classList.add('terminal-active'), 500);
+          setTimeout(() => entry.target.classList.add('terminal-active'), 200);
           termObserver.unobserve(entry.target);
         }
       });

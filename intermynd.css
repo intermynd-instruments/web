@@ -165,18 +165,18 @@
 
 /* Animate on trigger */
 .terminal-label.terminal-active .term-slash {
-  animation: blink3 1.2s ease forwards;
-  animation-delay: 0.2s;
+  animation: blink3 1s ease forwards;
+  animation-delay: 0.1s;
 }
 
 .terminal-label.terminal-active .term-text {
-  animation: type-reveal 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-  animation-delay: 0.6s;
+  animation: type-reveal 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.3s;
 }
 
 .terminal-label.terminal-active .term-block {
-  animation: blink5 2s ease forwards;
-  animation-delay: 1.4s;
+  animation: blink5 1.6s ease forwards;
+  animation-delay: 0.9s;
 }
 
 /* Keyframes — blink 3 times, end visible */
@@ -214,15 +214,23 @@
 /* --- Hero Blinking Square ------------------------------------------------ */
 
 .hero-blink {
-  animation: blink5 2s ease infinite;
+  opacity: 0;
+  animation:
+    hero-appear 0.3s ease 0.15s forwards,
+    blink5 2s ease 0.6s infinite;
+}
+
+@keyframes hero-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 /* --- Section Fade-in ----------------------------------------------------- */
 
 .fade-section {
   opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 .fade-section.fade-visible {
