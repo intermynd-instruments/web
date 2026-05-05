@@ -125,7 +125,7 @@ Graxebeosa is loaded from `NCLGraxebeosa-Demo.otf` via `@font-face` in `intermyn
 </section>
 ```
 
-### Section label
+### Section label — static
 
 The `/ Section Name ■` pattern used across the site.
 
@@ -134,6 +134,20 @@ The `/ Section Name ■` pattern used across the site.
   <span class="slash">/</span> Products <span>■</span>
 </p>
 ```
+
+### Section label — terminal/typewriter animation
+
+Add `terminal-label` to the `<p>` and wrap each part in `term-slash`, `term-text`, `term-block`. The animation triggers when the element scrolls into view: the `/` blinks, the text rolls out left to right, then the `■` blinks.
+
+```html
+<p class="section-label terminal-label">
+  <span class="term-slash">/</span>
+  <span class="term-text" style="--char-count: 8">Products</span>
+  <span class="term-block">■</span>
+</p>
+```
+
+The `--char-count` custom property tells the typewriter animation how many steps to use. Color classes are applied directly (`text-[#6f26de]`, `text-neutral-300`, etc.). The Intersection Observer class `terminal-active` is added automatically when in view.
 
 ### Hamburger menu
 
