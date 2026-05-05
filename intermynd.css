@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Intermynd Instruments — Design System
+   v1.0
+   ========================================================================== */
+
+/* --- Font Face — Nexmode (display / pixel) -------------------------------- */
+@font-face {
+  font-family: 'Pixel';
+  src: url('Nexmod-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- Design Tokens -------------------------------------------------------- */
+:root {
+  /* Palette — primary accent */
+  --color-primary:       #6f26de;
+  --color-primary-hover: #5a1eb2;
+
+  /* Palette — dark surfaces */
+  --color-bg-darkest:    #000000;
+  --color-bg-dark:       #0a0a0a;
+  --color-bg-muted:      #050505;
+
+  /* Palette — light surfaces */
+  --color-bg-light:      #ffffff;
+  --color-bg-off:        #f9fafb;  /* Tailwind neutral-50 */
+
+  /* Palette — borders */
+  --color-border-dark:   #262626;  /* Tailwind neutral-800 */
+  --color-border-light:  #e5e5e5;  /* Tailwind neutral-200 */
+
+  /* Palette — text */
+  --color-text-heading:  #171717;  /* neutral-900 */
+  --color-text-body:     #737373;  /* neutral-500 */
+  --color-text-muted:    #a3a3a3;  /* neutral-400 */
+
+  /* Typography */
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Pixel', monospace;
+}
+
+/* --- Background Patterns -------------------------------------------------- */
+
+/* Subtle dot grid — dark version (for light surfaces) */
+.dot-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Subtle dot grid — primary-tinted (for callouts) */
+.dot-grid-primary {
+  background-image: radial-gradient(rgba(111, 38, 222, 0.15) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* --- Hamburger Menu ------------------------------------------------------- */
+.hamburger-line {
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-menu-open .hamburger-top {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-open .hamburger-mid {
+  opacity: 0;
+}
+
+.mobile-menu-open .hamburger-bot {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* --- Product Grid Layout -------------------------------------------------- */
+
+/* Full-width tile grid — no rounded corners, no gaps, internal borders */
+.products-grid > * {
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.products-grid > *:last-child {
+  border-bottom: none;
+}
+
+/* Tablet: 2-column → add right borders, remove from even children */
+@media (min-width: 640px) {
+  .products-grid > * {
+    border-right: 1px solid var(--color-border-dark);
+  }
+  .products-grid > *:nth-child(even) {
+    border-right: none;
+  }
+}
+
+/* Desktop: 3-column → reset all to have right border, then drop from 3n */
+@media (min-width: 1024px) {
+  .products-grid > *:nth-child(n) {
+    border-right: 1px solid var(--color-border-dark);
+  }
+  .products-grid > *:nth-child(3n) {
+    border-right: none;
+  }
+}
+
+/* --- How-It-Works / 2-col Grid -------------------------------------------- */
+.how-grid > * {
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.how-grid > *:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 640px) {
+  .how-grid > * {
+    border-bottom: none;
+    border-right: 1px solid var(--color-border-dark);
+  }
+  .how-grid > *:last-child {
+    border-right: none;
+  }
+}
+
+/* --- Section Header / Label ----------------------------------------------- */
+
+/* / Section Name ■ */
+.section-label {
+  font-size:    0.75rem;    /* text-xs */
+  font-weight:  600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-primary);
+}
+
+.section-label .slash {
+  color: var(--color-text-muted);
+}
+
+/* --- Utility -------------------------------------------------------------- */
+
+/* Hide scrollbar (for carousels / horizontal scroll) */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}

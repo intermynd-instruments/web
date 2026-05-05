@@ -27,33 +27,7 @@
       }
     }
   </script>
-  <style>
-    @font-face {
-      font-family: 'Pixel';
-      src: url('Nexmod-Regular.otf') format('opentype');
-      font-weight: normal;
-      font-style: normal;
-    }
-    .dot-grid { background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px); background-size: 24px 24px; }
-    .dot-grid-light { background-image: radial-gradient(rgba(111,38,222,0.15) 1px, transparent 1px); background-size: 24px 24px; }
-    .hamburger-line { transition: transform 0.2s ease, opacity 0.2s ease; }
-    .mobile-menu-open .hamburger-top { transform: translateY(8px) rotate(45deg); }
-    .mobile-menu-open .hamburger-mid { opacity: 0; }
-    .mobile-menu-open .hamburger-bot { transform: translateY(-8px) rotate(-45deg); }
-    .products-grid > * { border-bottom: 1px solid #262626; border-right: 1px solid #262626; }
-    .products-grid > *:last-child { border-bottom: none; }
-    .how-grid > * { border-bottom: 1px solid #262626; }
-    .how-grid > *:last-child { border-bottom: none; }
-    @media (min-width: 640px) {
-      .products-grid > *:nth-child(even) { border-right: none; }
-      .how-grid > * { border-bottom: none; border-right: 1px solid #262626; }
-      .how-grid > *:last-child { border-right: none; }
-    }
-    @media (min-width: 1024px) {
-      .products-grid > * { border-right: 1px solid #262626; }
-      .products-grid > *:nth-child(3n) { border-right: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="intermynd.css">
 </head>
 <body class="bg-white text-neutral-900 font-sans antialiased">
 
@@ -115,13 +89,13 @@
   </section>
 
   <!-- For Musicians & Builders -->
-  <section class="border-t border-neutral-200 bg-neutral-50">
+  <section class="bg-[#6f26de]">
     <div class="w-full px-6 lg:px-16 pt-24 pb-14">
-      <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-4">
-        <span class="text-neutral-300">/</span> Open by design <span class="text-[#6f26de]">■</span>
+      <p class="text-xs font-semibold text-white/80 tracking-[0.2em] uppercase mb-4">
+        <span class="text-white/40">/</span> Open by design <span class="text-white">■</span>
       </p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 text-neutral-900">For musicians &amp; builders.</h2>
-      <p class="text-neutral-500 max-w-2xl leading-relaxed text-sm sm:text-base">
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 text-white">For musicians &amp; builders.</h2>
+      <p class="text-white/60 max-w-2xl leading-relaxed text-sm sm:text-base">
         Two ways to get an Intermynd instrument — buy it ready to play, or build it yourself from open schematics.
       </p>
     </div>
