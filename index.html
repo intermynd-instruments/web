@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Small-batch electronic musical instruments for musicians who want a tighter loop between hardware, software, and performance.">
+  <meta property="og:title" content="Intermynd Instruments — Workflow-first instruments">
+  <meta property="og:description" content="Small-batch electronic musical instruments designed for the connected mind.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Intermynd Instruments — Workflow-first instruments">
+  <meta name="twitter:description" content="Small-batch electronic musical instruments designed for the connected mind.">
+  <title>Intermynd Instruments — Workflow-first musical instruments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            pixel: ['Pixel', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+  <style>
+    @font-face {
+      font-family: 'Pixel';
+      src: url('Nexmod-Regular.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+    .dot-grid { background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px); background-size: 24px 24px; }
+    .dot-grid-light { background-image: radial-gradient(rgba(111,38,222,0.15) 1px, transparent 1px); background-size: 24px 24px; }
+    .hamburger-line { transition: transform 0.2s ease, opacity 0.2s ease; }
+    .mobile-menu-open .hamburger-top { transform: translateY(8px) rotate(45deg); }
+    .mobile-menu-open .hamburger-mid { opacity: 0; }
+    .mobile-menu-open .hamburger-bot { transform: translateY(-8px) rotate(-45deg); }
+    .products-grid > * { border-bottom: 1px solid #262626; border-right: 1px solid #262626; }
+    .products-grid > *:last-child { border-bottom: none; }
+    @media (min-width: 640px) {
+      .products-grid > *:nth-child(even) { border-right: none; }
+    }
+    @media (min-width: 1024px) {
+      .products-grid > * { border-right: 1px solid #262626; }
+      .products-grid > *:nth-child(3n) { border-right: none; }
+    }
+  </style>
+</head>
+<body class="bg-white text-neutral-900 font-sans antialiased">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#6f26de]">
+    <nav class="w-full px-6 lg:px-16 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center">
+        <img src="logo.svg" alt="Intermynd Instruments" class="h-16 w-auto">
+      </a>
+      <div class="hidden md:flex items-center gap-8 text-sm font-medium text-white/70">
+        <a href="#products" class="hover:text-white transition-colors">Products</a>
+        <a href="#approach" class="hover:text-white transition-colors">Approach</a>
+        <a href="#production" class="hover:text-white transition-colors">Batches</a>
+      </div>
+      <div class="hidden md:flex items-center gap-4">
+        <a href="#newsletter" class="px-4 py-1.5 rounded-full border border-white/40 text-white/80 hover:border-white hover:text-white transition-all text-xs font-semibold tracking-wide uppercase">Stay Updated</a>
+      </div>
+      <button id="menu-btn" class="md:hidden flex flex-col gap-1.5 w-7 h-7 justify-center items-end z-50" aria-label="Toggle menu">
+        <span class="hamburger-line hamburger-top block w-6 h-[2px] bg-white rounded-full"></span>
+        <span class="hamburger-line hamburger-mid block w-5 h-[2px] bg-white rounded-full"></span>
+        <span class="hamburger-line hamburger-bot block w-6 h-[2px] bg-white rounded-full"></span>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/20 bg-[#6f26de]">
+      <div class="px-6 py-6 flex flex-col gap-5 text-lg font-medium text-white/70">
+        <a href="#products" class="hover:text-white transition-colors" onclick="closeMenu()">Products</a>
+        <a href="#approach" class="hover:text-white transition-colors" onclick="closeMenu()">Approach</a>
+        <a href="#production" class="hover:text-white transition-colors" onclick="closeMenu()">Batches</a>
+        <a href="#newsletter" class="inline-flex self-start px-4 py-2 rounded-full border border-white/40 text-white/80 hover:border-white hover:text-white transition-all text-sm font-semibold tracking-wide uppercase" onclick="closeMenu()">Stay Updated</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="pt-16 relative overflow-hidden bg-[#6f26de]">
+    <div class="absolute inset-0 dot-grid"></div>
+    <div class="w-full px-6 lg:px-16 pt-6 pb-24 relative z-10">
+      <div class="max-w-4xl">
+        <h1 class="font-pixel text-[3.5rem] sm:text-[5rem] md:text-[7rem] lg:text-[9rem] xl:text-[11rem] leading-[1.15] sm:leading-[1.1] tracking-[0.02em] mb-8 sm:mb-12 text-black">
+          INTERMYND<br>INSTRUMENTS
+        </h1>
+        <p class="text-lg sm:text-xl lg:text-2xl text-black/70 max-w-2xl mb-4 font-light leading-relaxed">
+          Workflow-first instruments for the connected mind.
+        </p>
+        <p class="text-sm sm:text-base text-black/50 max-w-xl mb-12 leading-relaxed">
+          We design devices for musicians who want a tighter loop between hardware, software, and performance. Every unit is made in small batches and built to order.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-black text-white font-semibold rounded-full hover:bg-neutral-800 transition-colors text-sm">
+            See the line
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#approach" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-black/30 text-black/80 hover:border-black/60 hover:text-black transition-all text-sm font-semibold">
+            How we build
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="border-t border-neutral-200 bg-neutral-50">
+    <div class="w-full px-6 lg:px-16 py-20">
+      <div class="flex flex-wrap gap-x-20 gap-y-10 mb-20">
+        <div>
+          <p class="text-5xl sm:text-6xl font-bold tracking-tight text-neutral-900">3</p>
+          <p class="text-xs font-semibold text-[#6f26de] mt-3 uppercase tracking-[0.2em]">Instruments</p>
+          <p class="text-sm text-neutral-400 mt-1">in current line</p>
+        </div>
+        <div>
+          <p class="text-5xl sm:text-6xl font-bold tracking-tight text-neutral-900">&mdash;</p>
+          <p class="text-xs font-semibold text-[#6f26de] mt-3 uppercase tracking-[0.2em]">Made to order</p>
+          <p class="text-sm text-neutral-400 mt-1">small batches only</p>
+        </div>
+        <div>
+          <p class="text-5xl sm:text-6xl font-bold tracking-tight text-neutral-900">&lt;/&gt;</p>
+          <p class="text-xs font-semibold text-[#6f26de] mt-3 uppercase tracking-[0.2em]">Web-native</p>
+          <p class="text-sm text-neutral-400 mt-1">control surfaces</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-3 gap-10">
+        <div class="border-t border-neutral-200 pt-8">
+          <span class="text-xs font-bold text-[#6f26de] tracking-[0.3em]">01</span>
+          <h3 class="text-lg font-semibold mt-4 mb-3 text-neutral-900">Browser-based control surfaces</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Full configuration and deeper control through a modern web interface that feels native, not bolted-on.</p>
+        </div>
+        <div class="border-t border-neutral-200 pt-8">
+          <span class="text-xs font-bold text-[#6f26de] tracking-[0.3em]">02</span>
+          <h3 class="text-lg font-semibold mt-4 mb-3 text-neutral-900">Portable forms for real movement</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Shaped for desks, cases, and live setups. Sized to move between studio, rehearsal room, and stage.</p>
+        </div>
+        <div class="border-t border-neutral-200 pt-8">
+          <span class="text-xs font-bold text-[#6f26de] tracking-[0.3em]">03</span>
+          <h3 class="text-lg font-semibold mt-4 mb-3 text-neutral-900">Focused runs, not mass production</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Each unit is built with intention. No anonymous warehouse stock. No chasing scale for its own sake.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Launch Film -->
+  <section class="border-t border-neutral-200 bg-white">
+    <div class="w-full px-6 lg:px-16 py-24">
+      <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-8">
+        <span class="text-neutral-300">/</span> Launch Film <span class="text-[#6f26de]">■</span>
+      </p>
+      <div class="relative aspect-video bg-neutral-100 border border-neutral-200 rounded-xl flex items-center justify-center group cursor-pointer overflow-hidden">
+        <div class="absolute inset-0 dot-grid-light"></div>
+        <div class="relative z-10 flex flex-col items-center gap-4">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" class="text-[#6f26de] group-hover:scale-110 transition-transform">
+            <circle cx="12" cy="12" r="11" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 8v8l6-4-6-4z" fill="currentColor"/>
+          </svg>
+          <span class="text-sm font-medium text-neutral-400 group-hover:text-[#6f26de] transition-colors">Watch on YouTube</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section id="products" class="border-t border-neutral-200 bg-neutral-50 scroll-mt-20">
+    <div class="w-full px-6 lg:px-16 pt-24 pb-14">
+      <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-4">
+        <span class="text-neutral-300">/</span> Products <span class="text-[#6f26de]">■</span>
+      </p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-3 text-neutral-900">Three devices, one philosophy.</h2>
+      <p class="text-neutral-500 max-w-2xl leading-relaxed text-sm sm:text-base">
+        A placeholder walkthrough for the lineup. Swap in product photography, detailed specs, and launch timing as the range evolves.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 bg-[#0a0a0a] products-grid w-full">
+        <!-- Kaiser-1 -->
+        <div>
+          <div class="aspect-square flex items-center justify-center">
+            <span class="text-7xl sm:text-8xl lg:text-7xl xl:text-9xl font-black text-neutral-800 tracking-tight select-none">K-1</span>
+          </div>
+          <div class="border-t border-neutral-800"></div>
+          <div class="p-6 sm:p-8 lg:p-10">
+            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">Polyphonic Synth</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-2">Kaiser-1</h3>
+            <p class="text-sm text-neutral-400 mb-6 leading-relaxed">Direct control, fast setup, and a workflow that moves cleanly between hardware and web-based editing.</p>
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-xl sm:text-2xl font-bold text-white">$159 <span class="text-xs font-normal text-neutral-500">USD</span></span>
+              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors">Preorder</a>
+            </div>
+          </div>
+        </div>
+        <!-- Polydeck -->
+        <div>
+          <div class="aspect-square flex items-center justify-center">
+            <span class="text-7xl sm:text-8xl lg:text-7xl xl:text-9xl font-black text-neutral-800 tracking-tight select-none">PD-12</span>
+          </div>
+          <div class="border-t border-neutral-800"></div>
+          <div class="p-6 sm:p-8 lg:p-10">
+            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">Performance Controller</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-2">Polydeck</h3>
+            <p class="text-sm text-neutral-400 mb-6 leading-relaxed">A broader performance surface without giving up portability, clarity, or a modern control experience.</p>
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-xl sm:text-2xl font-bold text-white">$129 <span class="text-xs font-normal text-neutral-500">USD</span></span>
+              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors">Preorder</a>
+            </div>
+          </div>
+        </div>
+        <!-- Drumstream -->
+        <div>
+          <div class="aspect-square flex items-center justify-center">
+            <span class="text-7xl sm:text-8xl lg:text-7xl xl:text-9xl font-black text-neutral-800 tracking-tight select-none">DS-8</span>
+          </div>
+          <div class="border-t border-neutral-800"></div>
+          <div class="p-6 sm:p-8 lg:p-10">
+            <span class="text-[10px] font-bold tracking-[0.15em] uppercase text-[#6f26de]">Drum Machine</span>
+            <h3 class="text-2xl sm:text-3xl font-bold text-white mt-2 mb-2">Drumstream DS-8</h3>
+            <p class="text-sm text-neutral-400 mb-6 leading-relaxed">The same portable footprint and connected UI approach, built for rhythm-driven setups.</p>
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-xl sm:text-2xl font-bold text-white">$450 <span class="text-xs font-normal text-neutral-500">USD</span></span>
+              <a href="#" class="inline-flex items-center px-6 py-2.5 bg-[#6f26de] text-white text-xs font-bold tracking-[0.15em] uppercase hover:bg-[#5a1eb2] transition-colors">Preorder</a>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- Approach -->
+  <section id="approach" class="border-t border-neutral-200 bg-white scroll-mt-20">
+    <div class="w-full px-6 lg:px-16 py-24">
+      <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-4">
+        <span class="text-neutral-300">/</span> Approach <span class="text-[#6f26de]">■</span>
+      </p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4 text-neutral-900">Designed like instruments.<br class="hidden sm:block">Built like modern tools.</h2>
+      <p class="text-neutral-500 max-w-2xl mb-16 leading-relaxed text-sm sm:text-base">
+        Every product starts from the musician&rsquo;s actual loop: idea, edit, rehearse, perform, repeat. Less friction, more time making decisions that matter.
+      </p>
+      <div class="grid sm:grid-cols-3 gap-10">
+        <div class="border-t border-neutral-200 pt-8">
+          <div class="w-10 h-10 rounded-lg bg-[#6f26de]/10 border border-[#6f26de]/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-neutral-900">Workflow before feature count</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">The musician&rsquo;s loop drives every decision. We optimize for the moments between idea and execution, not spec sheets.</p>
+        </div>
+        <div class="border-t border-neutral-200 pt-8">
+          <div class="w-10 h-10 rounded-lg bg-[#6f26de]/10 border border-[#6f26de]/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-neutral-900">Hardware with a web-native layer</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Physical devices paired with state-of-the-art browser UIs. Setup, configuration, and deeper control that feels current, not compromised.</p>
+        </div>
+        <div class="border-t border-neutral-200 pt-8">
+          <div class="w-10 h-10 rounded-lg bg-[#6f26de]/10 border border-[#6f26de]/20 flex items-center justify-center mb-5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold mb-3 text-neutral-900">Portable by default</h3>
+          <p class="text-sm text-neutral-500 leading-relaxed">Instruments shaped for real movement between studios, desks, rehearsal rooms, and live environments &mdash; without losing clarity or intent.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="border-t border-neutral-200 bg-neutral-50">
+    <div class="w-full px-6 lg:px-16 py-24">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-6">
+          <span class="text-neutral-300">/</span> Mission <span class="text-[#6f26de]">■</span>
+        </p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-neutral-900">Build instruments that keep musicians in flow.</h2>
+        <p class="text-neutral-500 max-w-xl mx-auto leading-relaxed text-sm sm:text-base">
+          Intermynd exists to close the gap between physical instruments and modern software. The mission is simple: make hardware that feels immediate in the hands, powerful in the browser, and calm enough to disappear into the creative loop.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Production -->
+  <section id="production" class="border-t border-neutral-200 bg-white scroll-mt-20">
+    <div class="w-full px-6 lg:px-16 py-24">
+      <div class="max-w-3xl mx-auto text-center">
+        <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-6">
+          <span class="text-neutral-300">/</span> Production <span class="text-[#6f26de]">■</span>
+        </p>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-6 text-neutral-900">Small batches. Built to order.</h2>
+        <p class="text-neutral-500 max-w-xl mx-auto mb-10 leading-relaxed text-sm sm:text-base">
+          Not chasing scale for its own sake. Each run stays focused, deliberate, and close to the product &mdash; so the result feels considered from enclosure to interface.
+        </p>
+        <a href="#products" class="inline-flex items-center gap-2 px-6 py-3 bg-[#6f26de] text-white font-semibold rounded-full hover:bg-[#5a1eb2] transition-colors text-sm">
+          View the line
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section id="newsletter" class="border-t border-neutral-200 bg-neutral-50 scroll-mt-20">
+    <div class="w-full px-6 lg:px-16 py-24">
+      <div class="max-w-lg mx-auto text-center">
+        <p class="text-xs font-semibold text-[#6f26de] tracking-[0.2em] uppercase mb-6">
+          <span class="text-neutral-300">/</span> Newsletter <span class="text-[#6f26de]">■</span>
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight mb-3 text-neutral-900">Get preorder updates, batch windows,<br class="hidden sm:block">and product news.</h2>
+        <form class="flex flex-col sm:flex-row gap-3 mt-8" onsubmit="event.preventDefault(); this.reset();">
+          <input type="email" placeholder="Email address" required
+            class="flex-1 bg-white border border-neutral-300 rounded-full px-5 py-3 text-sm text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-[#6f26de] transition-colors">
+          <button type="submit"
+             class="px-6 py-3 bg-[#6f26de] text-white font-semibold rounded-full hover:bg-[#5a1eb2] transition-colors text-sm whitespace-nowrap">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-200 bg-white">
+    <div class="w-full px-6 lg:px-16 py-16">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-10 mb-16">
+        <div class="lg:col-span-2">
+          <a href="#" class="flex items-center gap-3">
+            <img src="logo.svg" alt="Intermynd Instruments" class="h-8 w-auto">
+            <span class="text-neutral-500 font-medium text-xs tracking-wider uppercase">Intermynd</span>
+          </a>
+          <p class="text-sm text-neutral-500 mt-3 max-w-xs leading-relaxed">
+            Small-batch instruments for musicians who want a more modern workflow.
+          </p>
+        </div>
+        <div>
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[#6f26de] mb-4">/ Navigate</p>
+          <div class="flex flex-col gap-2 text-sm text-neutral-500">
+            <a href="#products" class="hover:text-[#6f26de] transition-colors">Products</a>
+            <a href="#approach" class="hover:text-[#6f26de] transition-colors">Approach</a>
+            <a href="#production" class="hover:text-[#6f26de] transition-colors">Production</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[#6f26de] mb-4">/ Connect</p>
+          <div class="flex flex-col gap-2 text-sm text-neutral-500">
+            <a href="#" class="hover:text-[#6f26de] transition-colors">Twitter / X</a>
+            <a href="#" class="hover:text-[#6f26de] transition-colors">Instagram</a>
+            <a href="#" class="hover:text-[#6f26de] transition-colors">YouTube</a>
+          </div>
+        </div>
+        <div>
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-[#6f26de] mb-4">/ Stay in touch</p>
+          <a href="#newsletter" class="text-sm text-neutral-500 hover:text-[#6f26de] transition-colors">Newsletter</a>
+        </div>
+      </div>
+      <div class="border-t border-neutral-200 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-neutral-400">Intermynd Instruments &copy; 2026</p>
+        <a href="#" class="text-xs text-neutral-400 hover:text-[#6f26de] transition-colors flex items-center gap-1">
+          Back to top
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 10V2M2 6l4-4 4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      menuBtn.classList.toggle('mobile-menu-open');
+    });
+    function closeMenu() {
+      mobileMenu.classList.add('hidden');
+      menuBtn.classList.remove('mobile-menu-open');
+    }
+  </script>
+</body>
+</html>
