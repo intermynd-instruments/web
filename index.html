@@ -161,9 +161,10 @@
           </div>
         </div>
         <!-- Polydeck -->
-        <div>
-          <div class="aspect-square flex items-center justify-center">
-            <span class="text-7xl sm:text-8xl lg:text-7xl xl:text-9xl font-black text-neutral-800 tracking-tight select-none">PD-12</span>
+        <div class="group">
+          <div class="aspect-square flex items-center justify-center bg-[#dfdfdf] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
+            <img src="pd12-top.jpeg" alt="Polydeck" class="polydeck-top w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0">
+            <img src="pd12-closeup.jpeg" alt="Polydeck closeup" class="polydeck-closeup absolute inset-0 w-full h-full object-contain p-6 sm:p-8 lg:p-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           </div>
           <div class="border-t border-neutral-800"></div>
           <div class="p-6 sm:p-8 lg:p-10">
@@ -379,6 +380,21 @@
       });
     }, { threshold: 0.3 });
     termLabels.forEach(l => termObserver.observe(l));
+
+    // Mobile image cycle for Polydeck
+    if ('ontouchstart' in window || window.innerWidth < 768) {
+      const group = document.querySelector('.polydeck-group');
+      if (group) {
+        const top = group.querySelector('.polydeck-top');
+        const closeup = group.querySelector('.polydeck-closeup');
+        let showing = true;
+        setInterval(() => {
+          showing = !showing;
+          top.style.opacity = showing ? '1' : '0';
+          closeup.style.opacity = showing ? '0' : '1';
+        }, 2000);
+      }
+    }
   </script>
 </body>
 </html>
