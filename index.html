@@ -165,6 +165,10 @@
           <div class="aspect-square flex items-center justify-center bg-[#dfdfdf] p-6 sm:p-8 lg:p-10 relative overflow-hidden">
             <img src="pd12-top.jpeg" alt="Polydeck" class="polydeck-top w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0">
             <img src="pd12-closeup.jpeg" alt="Polydeck closeup" class="polydeck-closeup absolute inset-0 w-full h-full object-contain p-4 sm:p-5 lg:p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+            <div class="absolute left-1/2 -translate-x-1/2 bottom-3 flex gap-2 z-10">
+              <button class="color-dot w-4 h-4 rounded-full border-2 border-white/80 bg-black ring-2 ring-[#6f26de]" data-color="black" aria-label="Black finish"></button>
+              <button class="color-dot w-4 h-4 rounded-full border-2 border-black/30 bg-white" data-color="white" aria-label="White finish"></button>
+            </div>
           </div>
           <div class="border-t border-neutral-800"></div>
           <div class="p-6 sm:p-8 lg:p-10">
@@ -380,6 +384,26 @@
       });
     }, { threshold: 0.3 });
     termLabels.forEach(l => termObserver.observe(l));
+
+    // Polydeck color switcher
+    document.querySelectorAll('.polydeck-group').forEach(group => {
+      group.addEventListener('click', (e) => {
+        const dot = e.target.closest('.color-dot');
+        if (!dot) return;
+        const color = dot.dataset.color;
+        group.querySelectorAll('.color-dot').forEach(d => d.classList.remove('ring-2', 'ring-[#6f26de]'));
+        dot.classList.add('ring-2', 'ring-[#6f26de]');
+        const top = group.querySelector('.polydeck-top');
+        const closeup = group.querySelector('.polydeck-closeup');
+        if (color === 'white') {
+          top.src = 'pd12-top-white.jpg';
+          closeup.src = 'pd12-closeup-white.jpg';
+        } else {
+          top.src = 'pd12-top.jpeg';
+          closeup.src = 'pd12-closeup.jpeg';
+        }
+      });
+    });
 
     // Mobile image cycle for Polydeck
     if ('ontouchstart' in window || window.innerWidth < 768) {
